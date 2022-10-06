@@ -1,5 +1,6 @@
 const path = require("path"); // 노드 모듈 중에 path를 가져와서 사용
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -28,5 +29,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
+    new CleanWebpackPlugin(),
   ],
 };
