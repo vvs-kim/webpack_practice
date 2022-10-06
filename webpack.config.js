@@ -10,4 +10,13 @@ module.exports = {
     path: path.resolve("./dist"),
     filename: "[name].js",
   },
+  module: {
+    // css-loader를 설정합니다.
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
 };
